@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venda seu carro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h2>Cadastre seu veículo para vender mais rápido!</h2>
+    </div>
+    <div class="container">
+      <p class="paragrafo-formulario">FORMULÁRIO</p>
+      <div class="linha"></div>
+      <h1>Venda fácil seu carro!</h1>
+      <p>Descreva as características e marque os opcionais que ele possui</p>
+      <div class="input">
+        <label for="titulo"
+          >Título do anúncio: <span class="asterisco">*</span></label
+        >
+        <input
+          type="text"
+          name="titulo"
+          placeholder="Um título para anunciar seu carro"
+          required
+        />
+        <div class="input">
+          <label for="preco">Preço: <span class="asterisco">*</span></label>
+          <input
+            type="number"
+            name="preco"
+            placeholder="Defina o preço"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="preco">Descrição: <span class="asterisco">*</span></label>
+          <textarea name="descricao" id="" placeholder="Aqui você coloca os detalhes do veículo, por exemplo: se ele tem algum arranhão"></textarea>
+      </div>
+      <div class="input">
+          <label for="marca">Marca: <span class="asterisco">*</span></label>
+          <input
+            type="text"
+            name="marca"
+            placeholder="Digite a marca do veiculo"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="marca">Modelo: <span class="asterisco">*</span></label>
+          <input
+            type="text"
+            name="modelo"
+            placeholder="Digite o modelo do veículo"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="quilometragem">Quilometragem: <span class="asterisco">*</span></label>
+          <input
+            type="number"
+            name="quilometragem"
+            placeholder="Digite a quilometragem do veículo"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="data">Data de compra: <span class="asterisco">*</span></label>
+          <input
+            type="date"
+            name="data"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="cambio">Tipo de câmbio: <span class="asterisco">*</span></label>
+          <input
+            type="radio"
+            name="cambio"
+            required
+          />
+          <label for="manual">Manual</label>
+          <input
+            type="radio"
+            name="cambio"
+            required
+          />
+          <label for="automatico">Automatico</label>
+        </div>
+    </div>
+    
+  </body>
+</html>
