@@ -77,3 +77,24 @@ textarea {
   padding: 10px 5px;
   margin-bottom: 30px;
 }
+
+.input-radio input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+.input-radio label {
+  margin: 10px 0;
+}
+
+.input-radio input,
+.input-radio label {
+  display: inline-block;
+}
+
+.opcao-check-box label,
+.opcao-check-box input {
+  margin: 0;
+  padding: 0;
+}
