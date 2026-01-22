@@ -50,13 +50,18 @@ body {
 label {
   margin-bottom: 5px;
 }
-input {
-  font-size: 15px;
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="file"] {
   width: 450px;
-  padding: 10px 0;
+  margin-bottom: 35px;
   border: none;
   border-bottom: 1px solid rgb(223, 223, 223);
-  margin-bottom: 40px;
+  font-size: 15px;
+  padding: 10px 0;
 }
 
 .asterisco {
@@ -86,10 +91,13 @@ textarea {
 
 .opcao-check-box label,
 .opcao-check-box input {
-  display: inline-block;
+  display: inline;
 }
 
-.opcao-check-box {
+.opcao-check-box input {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
 }
 
 .foto label {
@@ -101,4 +109,12 @@ textarea {
   height: 60px;
   background-color: rgb(102, 49, 187);
   color: white;
+}
+
+.opcoes {
+  margin-bottom: 30px;
+}
+
+.opcionais-check-box {
+  margin-bottom: 30px;
 }
