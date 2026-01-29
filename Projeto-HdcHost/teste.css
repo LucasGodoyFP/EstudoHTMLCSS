@@ -6,6 +6,7 @@
 
 header {
   background-color: #232a31;
+  height: 80px;
 }
 
 .logo {
@@ -13,24 +14,13 @@ header {
   height: 50px;
 }
 
-.navbar-container a {
-  color: white;
+.navbar-items {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  line-height: 80px;
+}
+
+.navbar-items a {
   text-decoration: none;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-li {
-  list-style: none;
-  padding: 0 10px;
-}
-
-.navbar-container ul {
-  display: flex;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: end;
-  height: 80px;
 }
