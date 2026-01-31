@@ -57,9 +57,116 @@ header {
 }
 
 .banner h1 {
-  font-size: 60px;
+  font-size: 55px;
+  text-shadow: 3px 3px 3px #000;
 }
 
 .banner p {
-  font-size: 30px;
+  font-size: 32px;
+  text-shadow: 3px 3px 3px #000;
+  font-weight: bold;
+}
+
+.services-container h3 {
+  padding-bottom: 25px;
+}
+
+.services-container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 80px 0;
+}
+
+.services-container li {
+  padding: 20px;
+}
+
+.services-container {
+  text-align: center;
+  justify-content: center;
+}
+
+.services-container p {
+  color: rgb(112, 116, 122);
+  line-height: 24px;
+}
+
+.fas {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.fa-shield-alt {
+  color: rgb(44, 199, 106);
+}
+
+.fa-rocket {
+  color: rgb(239, 63, 41);
+}
+
+.fa-comments {
+  color: rgb(239, 143, 41);
+}
+
+.pricing-container {
+  text-align: center;
+}
+
+.pricing-container h2 {
+  font-size: 36px;
+  color: rgb(51, 51, 51);
+}
+.pricing-container p {
+  font-size: 20px;
+  color: #70747a;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  gap: 200px;
+}
+
+.plan ul {
+  list-style: none;
+}
+
+.plan li {
+  background-color: rgb(232, 233, 234);
+  padding: 15px 70px;
+}
+
+.plan .plan-btn {
+  background-color: rgb(44, 199, 98);
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 10px;
+}
+
+.plan-btn:hover {
+  cursor: pointer;
+}
+
+.plan .plan-name {
+  background-color: rgb(32, 43, 52);
+  padding: 50px 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.plan .price {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(46, 199, 98);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto -50px;
+  position: relative;
+  color: #fff;
 }
