@@ -126,7 +126,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 50px auto;
-  gap: 200px;
+  gap: 80px;
 }
 
 .plan ul {
@@ -161,6 +161,7 @@ header {
 .plan .price {
   width: 120px;
   height: 120px;
+
   background-color: rgb(46, 199, 98);
   border-radius: 50%;
   display: flex;

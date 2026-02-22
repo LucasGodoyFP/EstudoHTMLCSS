@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+}
+
+input {
+  display: block;
+  width: 290px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(14, 112, 225);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  width: 290px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+}
+.banner-container img {
+  width: 400px;
+  margin-top: 80px;
+  margin-left: 300px;
+}
+
+.login-container {
+  background-color: #fff;
+  width: 400px;
+  border: 1px solid rgb(206, 206, 206);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.instagram {
+  width: 200px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.cadastrar-container {
+  text-align: center;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid rgb(206, 206, 206);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.download-container {
+  text-align: center;
+}
+
+.download-container img {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.form-container {
+  margin: 100px 20px;
+}
+
+.login-container .facebook-logo {
+  width: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cadastre-se {
+  color: rgb(36, 120, 255);
+}
+
+.esqueceu-senha {
+  color: rgb(34, 43, 143);
+  font-size: 14px;
+}
+
+.facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(119, 117, 117);
+}
+
+.login-container a {
+  margin-bottom: 20px;
+}
+
+.facebook-logo {
+  margin-right: 5px;
+}
