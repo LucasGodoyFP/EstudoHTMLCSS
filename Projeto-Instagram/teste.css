@@ -34,11 +34,12 @@ button {
 
 .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .banner-container img {
   width: 400px;
   margin-top: 80px;
-  margin-left: 300px;
 }
 
 .login-container {
