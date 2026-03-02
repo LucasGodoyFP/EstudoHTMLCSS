@@ -24,3 +24,7 @@ console.log(true && true);
 console.log(`se colocar true e true o resultado é: ${true && true} `);
 
 console.log(!3 > 1);
+
+console.log(typeof null, typeof undefined);
+console.log(5 * null);
+console.log(2 + "10");
