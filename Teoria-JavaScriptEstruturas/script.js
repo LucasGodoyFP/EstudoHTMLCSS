@@ -41,3 +41,28 @@ for (i = 0; i < 10; i++) {
   }
   console.log(i);
 }
+
+let job = "estoquistas";
+
+switch (job) {
+  case "Programador":
+    console.log("voce é um programador");
+    break;
+  case "advogado":
+    console.log("voce e um advogado");
+    break;
+  default:
+    console.log("ola");
+}
+
+variavel = 100;
+switch (variavel) {
+  case 200:
+    console.log("certo");
+  case 100:
+    console.log("errado");
+  case 10:
+    console.log("verde");
+  default:
+    console.log("vermelho");
+}
