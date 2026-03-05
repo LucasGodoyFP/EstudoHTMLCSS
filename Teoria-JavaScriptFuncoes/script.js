@@ -95,6 +95,8 @@ const repetirTexto = (texto, quantidadeRepetida = 5) => {
 
 repetirTexto("testando");
 
+//Closure:
+
 function testandoClosure() {
   let txt = "algo";
 
@@ -104,3 +106,35 @@ function testandoClosure() {
   dentroClosure();
 }
 testandoClosure();
+
+//Mais sobre closure:
+
+const multiplicacaoClosure = (n) => {
+  return (m) => {
+    return n * m;
+  };
+};
+
+const c1 = multiplicacaoClosure(5);
+const c2 = multiplicacaoClosure(10);
+
+console.log(c1);
+console.log(c2);
+
+console.log(c1(5));
+console.log(c2(10));
+
+//Recursão:
+
+const untilTen = (n, m) => {
+  if (n < 10) {
+    console.log("A função parou de executar!");
+  } else {
+    const x = n - m;
+
+    console.log(x);
+
+    untilTen(x, m);
+  }
+};
+untilTen(100, 7);
