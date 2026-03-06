@@ -153,3 +153,12 @@ const arrayNumerico = [1, 2, 3, 4, 5];
 arrayNumerico.forEach((numero) => {
   console.log(numero);
 });
+
+const posts = [
+  { titulo: "primeiro post", likes: 2 },
+  { titulo: "shrek", likes: 5 },
+];
+
+posts.forEach((post) => {
+  console.log(`exibindo ${post.titulo}, likes: ${post.likes}`);
+});
