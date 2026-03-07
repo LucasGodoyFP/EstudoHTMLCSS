@@ -1,31 +1,27 @@
+//Array - lista de elementos
 const lista = ["manga", "banana"];
 console.log(lista);
 console.log(typeof lista);
 
-//Propreidades:
-
+//Length - mostra a quantidade de itens do array
 const numeros = [1, 2, 3];
 console.log(numeros.length);
 
-//Acessando item do array com indice:
-
+//Indice - acessa um item do array pela posição
 const arr = ["oi", "tchau", "tudo"];
 console.log(arr[1]);
 
-//Métodos:
-//Métodos são os nomes roxos depois do . ex: numeros.concat
-//Propriedades são os nomes azuis depois do . ex: length
-
+//Concat - junta dois arrays
 const outrosNumeros = [4, 5, 6];
 const arraysConcatenados = numeros.concat(outrosNumeros);
 console.log(arraysConcatenados);
 
+//Métodos de string
 const teste = "lucas";
 console.log(teste.toUpperCase());
 console.log(teste.indexOf("c"));
 
-//Objetos:
-
+//Objeto - estrutura com propriedades e valores
 const pessoa = {
   nome: "lucas",
   idade: 22,
@@ -36,24 +32,26 @@ console.log(pessoa);
 console.log(pessoa.idade);
 console.log(pessoa.nome.length);
 
-//Criando e deletando propriedades:
-
+//Adicionar e deletar propriedades de objeto
 const carro = {
   motor: 1.0,
   marca: "BMW",
   modelo: "X6",
   km: 2000,
 };
+
 console.log(carro);
-//Adicionando propriedade depois
+
+//Adiciona nova propriedade ao objeto
 carro.portas = 5;
 
 console.log(carro);
+
+//Remove propriedade do objeto
 delete carro.km;
 console.log(carro);
 
-//Mais sobre objetos:
-
+//Object.assign - copia propriedades de um objeto para outro
 const primeiroObjeto = {
   cor: "verde",
   numero: 2,
@@ -63,19 +61,16 @@ const segundoObjeto = {
   tamanho: 10,
 };
 
-//Passa as propriedades do primeiroObjeto para o segundoObjeto
 Object.assign(segundoObjeto, primeiroObjeto);
 console.log(segundoObjeto);
 
-//Mostra os nomes das propriedades do objeto
+//Object.keys - mostra os nomes das propriedades
 console.log(Object.keys(carro));
 
-//Mostra nome e valor da propriedade do objeto:
-
+//Object.entries - mostra nome e valor das propriedades
 console.log(Object.entries(carro));
 
-//Mutacao:
-
+//Mutação - dois objetos apontando para o mesmo objeto na memória
 const a = {
   cor: "azul",
 };
@@ -88,72 +83,73 @@ a.numero = 10;
 console.log(a);
 console.log(b);
 
-//Não foi criado um objeto novo, e sim uma referencia do primeiro
+//Alteração em um afeta o outro
 delete b.numero;
 console.log(a);
 console.log(b);
 
+//For - percorre todos os itens do array
 const percorrerArray = [10, 20, 30, 40, 50];
 for (contador = 0; contador < percorrerArray.length; contador++) {
   console.log(percorrerArray[contador]);
 }
 
-//Push e Pop:
-
+//Push e Pop
 const frutas = ["maçã", " banana"];
 console.log(`o array original tem: ${frutas}`);
-//Push coloca um ou varios itens ao final do array
+
+//Push - adiciona item no final do array
 frutas.push("mamao");
 console.log(`o array apos o push tem: ${frutas}`);
 
-//Pop remove um item ao final do array e guarda ele
+//Pop - remove item do final do array
 itemRemovido = frutas.pop();
 console.log(`o array apos o pop tem: ${frutas}`);
 console.log(`a variavel item removido armazenou: ${itemRemovido}`);
 
+//Push com varios elementos
 const variosPush = [1, 2];
 variosPush.push(4, 6, 7, 8, 9);
 console.log(variosPush);
 
 //Shift e Unshift
 
-//Shift remove o primeiro item do array e guarda ele
+//Shift - remove o primeiro item do array
 const testandoShift = ["verde", "vermelho"];
 elementoRemovido = testandoShift.shift();
 console.log(elementoRemovido);
 console.log(testandoShift);
 
-//Unshift adiciona um ou varios itens no inicio do array:
+//Unshift - adiciona itens no inicio do array
 testandoShift.unshift("azul", "marrom");
 console.log(testandoShift);
 
-//IndexOf e lastIndexOf
+//IndexOf e LastIndexOf
 const meusElementos = ["pera", "goiaba", "uva", "pera"];
-//indexOf descobre o indice de um item
+
+//IndexOf - encontra o indice de um elemento
 console.log(meusElementos.indexOf("pera"));
 console.log(meusElementos[0]);
 
-//lastIndexOf pra casos de repeticao
+//LastIndexOf - encontra a ultima ocorrência
 console.log(meusElementos.lastIndexOf("pera"));
 
-//Slice corta array grande em array menor sem afetar o original
+//Slice - cria um novo array a partir de parte do original
 const testeSlice = ["a", "b", "c", "d", "e"];
 
-//Pega do indice 2 ao 4
+//Do indice 2 ao 4
 console.log(testeSlice.slice(2, 4 + 1));
 
-//Pode passar do indice desejado pra frente. ex: 2 em diante
-
+//Do indice 2 até o final
 console.log(testeSlice.slice(2));
 
-//ForEach: para cada numero do array imprima o numero
-//Forma mais facil de percorrer o array
-
+//ForEach - executa uma função para cada item do array
 const arrayNumerico = [1, 2, 3, 4, 5];
 arrayNumerico.forEach((numero) => {
   console.log(numero);
 });
 
+//Exemplo com objetos dentro do array
 const posts = [
   { titulo: "primeiro post", likes: 2 },
   { titulo: "shrek", likes: 5 },
@@ -162,3 +158,69 @@ const posts = [
 posts.forEach((post) => {
   console.log(`exibindo ${post.titulo}, likes: ${post.likes}`);
 });
+
+//Includes - verifica se existe elemento no array
+const marcas = ["bmw", "fiat", "celta"];
+console.log(marcas.includes("fiat"));
+
+//Reverse - inverte a ordem do array
+let animais = ["cao", "gato", "peixe"];
+console.log(animais);
+console.log(animais.reverse());
+
+//Rest Operator - recebe quantidade indefinida de argumentos
+const somaInfinita = (...argumentos) => {
+  let total = 0;
+
+  for (let i = 0; i < argumentos.length; i++) {
+    total += argumentos[i];
+  }
+
+  return total;
+};
+
+console.log(somaInfinita(1, 7, 2));
+
+//ForOf - percorre valores de arrays ou listas
+let testeForOf = (...argumentos) => {
+  total = 0;
+
+  for (numero of argumentos) {
+    total += numero;
+  }
+
+  return total;
+};
+
+console.log(testeForOf(1, 7, 2));
+
+//Destructuring (objetos) - cria variáveis a partir das propriedades
+const testeDestructuring = {
+  primeiroNome: "joao",
+  ultimoNome: "pereira",
+  profissao: "programador",
+};
+
+const { primeiroNome, ultimoNome, profissao } = testeDestructuring;
+console.log(primeiroNome, ultimoNome, profissao);
+
+//Renomeando variável
+const { primeiroNome: firstName } = testeDestructuring;
+console.log(firstName);
+
+//Destructuring (arrays) - cria variáveis a partir de posições do array
+let veiculos = ["aviao", "carro", "barco"];
+const [veiculoA, veiculoB, veiculoC] = veiculos;
+console.log(veiculoA);
+
+//JSON - estrutura de dados em formato de texto
+const exemploJSON =
+  '{"nome": "lucas", "idade": 22, "habilidades": ["HTML","CSS","JAVASCRIPT"]}';
+
+//JSON.parse - converte JSON para objeto
+const convertidoObjeto = JSON.parse(exemploJSON);
+console.log(convertidoObjeto);
+
+//JSON.stringify - converte objeto para JSON
+const convetidoJSON = JSON.stringify(convertidoObjeto);
+console.log(convetidoJSON);
