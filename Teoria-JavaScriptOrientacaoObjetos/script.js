@@ -181,3 +181,101 @@ console.log(lucao);
 
 console.log(lucao instanceof Lobo);
 console.log(Lobo instanceof Mamifero);
+
+class ContaBancaria {
+  constructor(titular, saldo) {
+    this.titular = titular;
+    this.saldo = saldo;
+    this.transacoes = [];
+  }
+  saque(quantidadeSaque) {
+    if (quantidadeSaque > this.saldo) {
+      console.log("Não há suficiente saldo para sacar essa quantia");
+    } else {
+      this.saldo -= quantidadeSaque;
+      this.transacoes.push({ tipo: "Saque", valor: quantidadeSaque });
+    }
+  }
+
+  depositar(quantidadeDeposito) {
+    this.saldo += quantidadeDeposito;
+    this.transacoes.push({ tipo: "Depósito", valor: quantidadeDeposito });
+  }
+
+  exibirSaldo() {
+    console.log(`O saldo atual disponível é: ${this.saldo}`);
+  }
+
+  exibirExtrato() {
+    console.log("Extrato:");
+    this.transacoes.forEach((transacao) => {
+      console.log(`${transacao.tipo}, ${transacao.valor}`);
+    });
+  }
+
+  transferir(valorTransferido, contaDestino) {
+    if (valorTransferido > this.saldo) {
+      console.log("Saldo insuficiente para transferência");
+      return;
+    }
+    this.saldo -= valorTransferido;
+    contaDestino.saldo += valorTransferido;
+
+    this.transacoes.push({
+      tipo: "transferencia enviada",
+      valor: valorTransferido,
+    });
+    contaDestino.transacoes.push({
+      tipo: "transferencia recebida",
+      valor: valorTransferido,
+    });
+  }
+}
+
+const sarah = new ContaBancaria("sarah", 2000);
+const jonas = new ContaBancaria("jonas", 200);
+console.log(sarah);
+sarah.saque(500);
+sarah.depositar(100);
+sarah.exibirSaldo();
+sarah.exibirExtrato();
+
+class Carro {
+  constructor(marca, modelo, velocidade) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.velocidade = velocidade;
+    this.ligado = false;
+  }
+  acelerar(valor) {
+    if (!this.ligado) {
+      console.log("O carro não pode acelerar desligado");
+      return;
+    }
+    this.velocidade += valor;
+  }
+
+  frear(valor) {
+    this.velocidade -= valor;
+  }
+  mostrarVelocidade() {
+    console.log(`O carro está a ${this.velocidade} km/h`);
+  }
+
+  ligar() {
+    this.ligado = true;
+    console.log("O carro está ligado");
+  }
+
+  desligar() {
+    this.ligado = false;
+    console.log("O carro está desligado");
+  }
+}
+
+const bmw = new Carro("bmw", "x6", 0);
+bmw.desligar();
+bmw.acelerar(20);
+bmw.ligar();
+bmw.acelerar(100);
+bmw.mostrarVelocidade();
