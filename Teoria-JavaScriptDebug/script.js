@@ -47,3 +47,15 @@ try {
 } finally {
   console.log("O código foi executado");
 }
+
+//Asertions
+
+function checaLista(lista) {
+  if (lista.length === 0) {
+    throw new Error("A lista nao pode ser vazia");
+  } else {
+    console.log(`A lista tem ${lista.length} elementos`);
+  }
+}
+
+checaLista([]);
