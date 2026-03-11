@@ -11,3 +11,12 @@ botao.addEventListener("click", imprimirMensagem);
 outroBotao.addEventListener("click", function deletarEvento() {
   botao.removeEventListener("click", imprimirMensagem);
 });
+
+//Argumento do evento - util para saber informações do evento
+const meuTitulo = document.querySelector(".titulo");
+meuTitulo.addEventListener("click", (event) => {
+  console.log(event);
+  console.log(event.offsetX);
+  console.log(event.pointerType);
+  console.log(event.target);
+});
