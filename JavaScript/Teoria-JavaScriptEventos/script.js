@@ -51,3 +51,52 @@ document.addEventListener("keyup", (event) => {
 document.addEventListener("keydown", (event) => {
   console.log(`apertou a tecla ${event.key}`);
 });
+
+//Outros eventos de mouse
+const mouseEvento = document.querySelector("#mouse");
+
+//Apertando click do mouse
+mouseEvento.addEventListener("mousedown", () => {
+  console.log("apertou");
+});
+
+//Soltando click do mouse
+mouseEvento.addEventListener("mouseup", () => {
+  console.log("soltou");
+});
+
+//Clique duplo
+mouseEvento.addEventListener("dblclick", () => {
+  console.log("clique dupplo");
+});
+
+//Movimento do mouse
+/*document.addEventListener("mousemove", (event) => {
+  console.log(`eixo X: ${event.x}`);
+  console.log(`eixo Y: ${event.y}`);
+});*/
+
+//Sroll
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 200) {
+    console.log("passamos de 200px");
+  }
+});
+
+//Evento de foco
+input = document.querySelector("#meu-input");
+
+//Ativa quando clica no input
+input.addEventListener("focus", () => {
+  console.log("Entrou no input");
+});
+
+//Ativda quando sai do input
+input.addEventListener("blur", () => {
+  console.log("Saiu do input");
+});
+
+//Evento de carregamento da pagina
+window.addEventListener("load", () => {
+  console.log("carregou a pagina");
+});
