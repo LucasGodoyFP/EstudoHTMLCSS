@@ -1,30 +1,48 @@
-console.log(2 + 8);
-console.log(5 + 3);
-console.log(5 * 4);
-console.log(10 / 2);
-console.log(5 + 4 * 2);
+const frutas = ["maca", "banana", "morango"];
+const [f1, f2, f3] = frutas;
+console.log(f3);
 
-console.log(typeof Infinity);
-console.log(typeof -Infinity);
-console.log(2 * "abc");
-numero = 2;
-console.log("um texto");
-console.log("testando a \nquebra de linha");
-console.log("espaçamento \t de tab");
-console.log("lucas" + "godoy" + numero);
+const produto = {
+  nome: "mouse",
+  preco: 200,
+  cor: "preto",
+  categoria: "periferico",
+};
 
-console.log(`a soma de 2+2 é: ${2 + 2}`);
+const { nome, preco, cor, categoria } = produto;
+console.log(categoria);
 
-console.log(`podemos executar qualquer coisa aqui: ${console.log("teste")}`);
+function exibirProduto({ nome, preco }) {
+  console.log(nome, preco);
+}
+exibirProduto(produto);
 
-console.log(true);
+const brinquedos = ["carriinho", "aviao", "spinner"];
+const marcos = [...frutas, ...brinquedos];
+console.log(marcos);
+const lucas = [0, ...frutas, "oloco"];
+console.log(lucas);
 
-console.log(typeof true);
-console.log(true && true);
-console.log(`se colocar true e true o resultado é: ${true && true} `);
+const nomeCarro = { nome: "x6" };
+const marcaCarro = { marca: "bwm" };
+const precoCarro = { preco: 2000 };
 
-console.log(!3 > 1);
+const carro = { ...nomeCarro, ...marcaCarro, ...precoCarro };
+console.log(carro);
 
-console.log(typeof null, typeof undefined);
-console.log(5 * null);
-console.log(2 + "10");
+class Animal {
+  constructor(nome, cor) {
+    this.nome = nome;
+    this.cor = cor;
+  }
+}
+
+class Peixe extends Animal {
+  constructor(nome, cor, aquatico) {
+    super(nome, cor);
+    this.aquatico = aquatico;
+  }
+}
+
+const peixe = new Peixe("nemo", "vermelho", true);
+console.log(peixe);
